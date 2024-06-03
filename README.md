@@ -6,7 +6,7 @@ This package will scrap data from [BMKG](https://www.bmkg.go.id/) to get informa
 
 This package used BeautifulSoup4 and Requests to generate JSON output that'll be used for web or mobile apps
 
-# How to Run
+## How to Run
 ```
 import gempaTerkini
 
