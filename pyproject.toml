@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "indonesia-latestearthquake_Rx168059"
-version = "2024.0.0.1"
+version = "2024.0.0.3"
 authors = [
   { name="Muhammad Dwi Reza", email="dwireza1002@gmail.com" },
 ]

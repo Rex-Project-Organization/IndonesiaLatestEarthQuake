@@ -94,8 +94,6 @@ def show_data(datas):
 
 
 if __name__ == '__main__':
-
-    if __name__ == '__main__':
-        print('Aplikasi utama')
-        result = data_extract()
-        show_data(result)
+    print('Aplikasi utama')
+    result = data_extract()
+    show_data(result)
