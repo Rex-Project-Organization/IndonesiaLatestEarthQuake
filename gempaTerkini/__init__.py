@@ -27,19 +27,19 @@ def data_extract():
         soup = BeautifulSoup(content.text, 'html.parser')
 
         # find span tag
-        result = soup.find('span', {'class': 'waktu'})
-        date = result.text.split(', ')[0]
-        time = result.text.split(', ')[1]
+        result_span = soup.find('span', {'class': 'waktu'})
+        date = result_span.text.split(', ')[0]
+        time = result_span.text.split(', ')[1]
 
         # find list tag in div tag
-        result = soup.find('div', {'class': 'col-md-6 col-xs-6 gempabumi-detail no-padding'})
-        result = result.findChildren('li')
+        result_div = soup.find('div', {'class': 'col-md-6 col-xs-6 gempabumi-detail no-padding'})
+        li = result_div.findChildren('li')
 
         result_list = []
 
         # substain result_list value
-        for i in range(len(result)):
-            result_list.append(result[i].text)
+        for i in range(len(li)):
+            result_list.append(li[i].text)
 
         # remove not used value
         result_list.pop()
@@ -94,5 +94,8 @@ def show_data(datas):
 
 
 if __name__ == '__main__':
-    print('Test')
-    print('Test2')
+
+    if __name__ == '__main__':
+        print('Aplikasi utama')
+        result = data_extract()
+        show_data(result)
