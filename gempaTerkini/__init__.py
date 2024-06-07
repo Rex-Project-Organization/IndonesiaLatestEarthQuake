@@ -30,7 +30,6 @@ class RecentTsunami(BencanaTerkini):
         print(f'Under Construction: {self.description}'.upper())
 
 
-
 class GempaTerkini(BencanaTerkini):
     def __init__(self, url):
         super(GempaTerkini, self).__init__(url, 'Getting Information about latest earthquake from BMKG Indonesia')

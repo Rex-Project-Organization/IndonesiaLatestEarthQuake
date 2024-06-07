@@ -11,8 +11,11 @@ This package used BeautifulSoup4 and Requests to generate JSON output that'll be
 import gempaTerkini
 
 if __name__ == '__main__':
-    result = gempaTerkini.data_extract()
-    gempaTerkini.show_data(result)
+    print('Aplikasi utama')
+
+    id_earthquake = GempaTerkini('https://www.bmkg.go.id/')
+    id_earthquake.show_description()
+    id_earthquake.run()
 ```
 
 # Author
