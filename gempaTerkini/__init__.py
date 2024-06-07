@@ -8,6 +8,9 @@ class BencanaTerkini:
         self.data_result = None
         self.link = url
 
+    def show_description(self):
+        print(f'description: {self.description}')
+
     def scrap_data(self):
         pass
 
@@ -17,6 +20,15 @@ class BencanaTerkini:
     def run(self):
         self.scrap_data()
         self.show_data()
+
+
+class RecentTsunami(BencanaTerkini):
+    def __init__(self, url):
+        super().__init__(url, 'Not but this should return recent tsunami in indonesia')
+
+    def show_description(self):
+        print(f'Under Construction: {self.description}'.upper())
+
 
 
 class GempaTerkini(BencanaTerkini):
@@ -122,5 +134,11 @@ if __name__ == '__main__':
     print('Aplikasi utama')
 
     id_earthquake = GempaTerkini('https://www.bmkg.go.id/')
-    print('description: ', id_earthquake.description)
+    id_earthquake.show_description()
     id_earthquake.run()
+
+    print('\n')
+
+    id_Tsunami = RecentTsunami('https://www.bmkg.go.id/')
+    id_Tsunami.show_description()
+    id_Tsunami.run()
